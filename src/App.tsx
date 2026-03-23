@@ -77,7 +77,7 @@ export default function App() {
         <div className="marquee-track whitespace-nowrap">
           {[...Array(10)].map((_, i) => (
             <span key={i} className="mx-8 font-mono text-xs uppercase tracking-[0.2em]">
-              BrandViz AI • Generative Marketing • Product Consistency • Powered by Gemini • 
+              MIT • Generative Marketing • Product Consistency • Powered by Gemini • 
             </span>
           ))}
         </div>
@@ -90,8 +90,7 @@ export default function App() {
           <div className="lg:col-span-5 space-y-12">
             <section>
               <h1 className="text-6xl md:text-8xl font-black uppercase leading-[0.85] mb-8">
-                Brand<br />
-                <span className="text-[#00FF00] stroke-black" style={{ WebkitTextStroke: '2px black' }}>Viz</span> AI
+                MIT
               </h1>
               <p className="text-xl font-medium max-w-md">
                 Upload your product and see it across the world in seconds. 
@@ -239,7 +238,7 @@ export default function App() {
                             onClick={() => {
                               const link = document.createElement('a');
                               link.href = result.url;
-                              link.download = `brandviz-${result.medium.replace(/\s+/g, '-')}.png`;
+                              link.download = `mit-${result.medium.replace(/\s+/g, '-')}.png`;
                               link.click();
                             }}
                             className="p-2 hover:bg-[#00FF00] transition-colors brutal-border"
@@ -270,9 +269,9 @@ export default function App() {
       {/* Footer */}
       <footer className="border-t-2 border-black py-12 bg-gray-50 mt-20">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="font-black text-2xl uppercase">BrandViz AI</div>
+          <div className="font-black text-2xl uppercase">MIT</div>
           <div className="flex gap-8 text-xs font-mono uppercase tracking-widest opacity-50">
-            <span>© 2026 BrandViz</span>
+            <span>© 2026 MIT</span>
             <span>Privacy</span>
             <span>Terms</span>
           </div>
