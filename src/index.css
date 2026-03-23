@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Anton", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --neon-green: #00FF00;
+  --brutal-black: #000000;
+  --gallery-white: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply bg-[#FFFFFF] text-black font-sans;
+  }
+}
+
+@utility brutal-border {
+  @apply border-2 border-black;
+}
+
+@utility brutal-shadow {
+  box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+}
+
+@utility brutal-shadow-hover {
+  &:hover {
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+    transform: translate(2px, 2px);
+  }
+}
+
+@utility brutal-btn {
+  @apply brutal-border brutal-shadow px-6 py-3 font-bold uppercase tracking-wider transition-all active:translate-x-1 active:translate-y-1 active:shadow-none;
+}
+
+@utility brutal-card {
+  @apply brutal-border bg-white p-6;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
